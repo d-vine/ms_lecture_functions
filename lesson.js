@@ -1,5 +1,7 @@
 function draw() {
     background(255, 255, 255);
+    
+    //smiley
     fill(230, 230, 0);
     ellipse(100, 100, 100, 100);
     fill(255, 255, 255);
@@ -10,6 +12,8 @@ function draw() {
     ellipse(120,90,5,5);
     noFill();
     arc(100, 110, 60, 40, 0, 180);
+
+    //stick figure
     ellipse(300,100,30,30);
     line(300,115,300,155);
     line(300,155,275,190);
