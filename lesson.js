@@ -11,25 +11,31 @@ function smiley_eye(x,y) {
 
 function smiley(x, y) {
     fill(230, 230, 0);
-    circle(x + 100, y + 100, 100);
-    smiley_eye(x + 80, y + 90);
-    smiley_eye(x + 120, y + 90);
-    smiley_eye(x +100, y + 70);
+    circle(x, y, 100);
+    smiley_eye(x - 20, y - 10);
+    smiley_eye(x + 20, y - 10);
+    smiley_eye(x, y - 30);
     noFill();
-    arc(x + 100, y + 110, 60, 40, 0, 180);
+    arc(x, y + 10, 60, 40, 0, 180);
 }
 
 function stick_figure(x, y) {
-    circle(x + 300, y + 100, 30);
-    line(x + 300,y + 115,x + 300,y + 155);
-    line(x + 300,y + 155,x + 275,y + 190);
-    line(x + 300,y + 155,x + 325,y + 190);
-    line(x + 300,y + 130,x + 325,y + 110);
-    line(x + 300,y + 130,x + 275,y + 110);
+    circle(x, y - 50, 30);
+    line(x, y - 35, x , y + 5);
+    line(x, y + 5, x - 25, y + 40);
+    line(x, y + 5, x + 25, y + 40);
+    line(x, y - 20, x + 25, y - 40);
+    line(x, y - 20, x - 25, y - 40);
 }
 
 function draw() {
     background(255, 255, 255);
-    smiley(0, 0);
-    stick_figure(0, 0);
+    smiley(50, 50);
+    smiley(150, 150);
+    smiley(250, 250);
+    smiley(350, 350);
+    stick_figure(233, 73);
+    stick_figure(353, 183);
+    stick_figure(58, 202);
+    stick_figure(177, 348);
 }
