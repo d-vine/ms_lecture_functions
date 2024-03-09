@@ -20,7 +20,7 @@ function smiley(x, y, size) {
 }
 
 function stick_figure(x, y, size) {
-    circle(x, y - size * 0.5, size * 0.3);
+    smiley(x, y - size * 0.5, size * 0.3);
     line(x, y - size * 0.35, x , y + size * 0.05);
     line(x, y + size * 0.05, x - size * 0.25, y + size * 0.4);
     line(x, y + size * 0.05, x + size * 0.25, y + size * 0.4);
