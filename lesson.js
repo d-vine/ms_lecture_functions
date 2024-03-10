@@ -41,7 +41,8 @@ function random_arguments() {
     var x = random(0 + margin, 400 - margin);
     var y = random(0 + margin, 400 - margin);
     var color = random_color();
-    return [x, y, size, color];
+    var sprite = round(random(0,1)) === 0 ? 'smiley' : 'stickfigure'; 
+    return [sprite, x, y, size, color];
 }
 
 function random_arguments_array(length) {
@@ -52,16 +53,24 @@ function random_arguments_array(length) {
     return colors;
 }
 
+function draw_random_sprite(args) {
+    if (args[0] === 'smiley') {
+        smiley.apply(this, args.slice(1));
+    } else {
+        stick_figure.apply(this, args.slice(1));
+    }
+}
+
 var args = random_arguments_array(8);
 
 function draw() {
     background(255, 255, 255);
-    smiley.apply(this, args[0]);
-    smiley.apply(this, args[1]);
-    smiley.apply(this, args[2]);
-    smiley.apply(this, args[3]);
-    stick_figure.apply(this, args[4]);
-    stick_figure.apply(this, args[5]);
-    stick_figure.apply(this, args[6]);
-    stick_figure.apply(this, args[7]);
+    draw_random_sprite(args[0]);
+    draw_random_sprite(args[1]);
+    draw_random_sprite(args[2]);
+    draw_random_sprite(args[3]);
+    draw_random_sprite(args[4]);
+    draw_random_sprite(args[5]);
+    draw_random_sprite(args[6]);
+    draw_random_sprite(args[7]);
 }
