@@ -28,7 +28,14 @@ function stick_figure(x, y, size, face_color) {
     line(x, y - size * 0.2, x - size * 0.25, y - size * 0.4);
 }
 
-var smiley_color = color(230, 230, 0);
+function random_color() {
+    var r = round(random(100,255)),
+        g = round(random(100,255)),
+        b = round(random(100,255));
+    return color(r, g, b);
+}
+
+var smiley_color = random_color();
 
 function draw() {
     background(255, 255, 255);
