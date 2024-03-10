@@ -46,11 +46,11 @@ function random_arguments() {
 }
 
 function random_arguments_array(length) {
-    var colors = [];
+    var args = [];
     for(var i = 0; i < length; i++) {
-        colors.push(random_arguments());
+        args.push(random_arguments());
     }
-    return colors;
+    return args;
 }
 
 function draw_random_sprite(args) {
@@ -61,16 +61,11 @@ function draw_random_sprite(args) {
     }
 }
 
-var args = random_arguments_array(8);
+var args = random_arguments_array(10);
 
 function draw() {
     background(255, 255, 255);
-    draw_random_sprite(args[0]);
-    draw_random_sprite(args[1]);
-    draw_random_sprite(args[2]);
-    draw_random_sprite(args[3]);
-    draw_random_sprite(args[4]);
-    draw_random_sprite(args[5]);
-    draw_random_sprite(args[6]);
-    draw_random_sprite(args[7]);
+    for (var i in args) {
+        draw_random_sprite(args[i]);
+    }
 }
