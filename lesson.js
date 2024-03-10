@@ -35,16 +35,24 @@ function random_color() {
     return color(r, g, b);
 }
 
-var smiley_color = random_color();
+function random_color_array(length) {
+    var colors = [];
+    for(var i = 0; i < length; i++) {
+        colors.push(random_color());
+    }
+    return colors;
+}
+
+var smiley_color_array = random_color_array(8);
 
 function draw() {
     background(255, 255, 255);
-    smiley(50, 50, 100, smiley_color);
-    smiley(150, 150, 90, smiley_color);
-    smiley(250, 250, 80, smiley_color);
-    smiley(350, 350, 70, smiley_color);
-    stick_figure(233, 73, 100, smiley_color);
-    stick_figure(353, 183, 90, smiley_color);
-    stick_figure(58, 202, 80, smiley_color);
-    stick_figure(177, 348, 70, smiley_color);
+    smiley(50, 50, 100, smiley_color_array[0]);
+    smiley(150, 150, 90, smiley_color_array[1]);
+    smiley(250, 250, 80, smiley_color_array[2]);
+    smiley(350, 350, 70, smiley_color_array[3]);
+    stick_figure(233, 73, 100, smiley_color_array[4]);
+    stick_figure(353, 183, 90, smiley_color_array[5]);
+    stick_figure(58, 202, 80, smiley_color_array[6]);
+    stick_figure(177, 348, 70, smiley_color_array[7]);
 }
